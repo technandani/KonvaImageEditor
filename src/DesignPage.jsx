@@ -265,8 +265,8 @@ const DesignPage = () => {
               onDragEnd={handleImageDragEnd}
               x={history[historyStep]?.imagePosition?.x || 100}
               y={history[historyStep]?.imagePosition?.y || 50}
-              width={Math.min(image.width, 600)}
-              height={Math.min(image.height, 400)}
+              height={400} 
+              width={(image.width / image.height) * 400} 
             />
           )}
           <Transformer ref={transformerRef} />
