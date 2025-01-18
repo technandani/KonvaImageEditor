@@ -192,7 +192,15 @@ const DesignPage = () => {
       <h1>Design Page</h1>
 
       {/* Toolbar */}
-      <div style={{ marginBottom: "10px", display: "flex", gap: "10px", justifyContent:'center', alignItems:'center' }}>
+      <div
+        style={{
+          marginBottom: "10px",
+          display: "flex",
+          gap: "10px",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <button onClick={handleUndo}>
           <img src="images/undo.png" style={{ height: "20px" }} alt="" />
         </button>
@@ -201,14 +209,16 @@ const DesignPage = () => {
         </button>
         <div onClick={togglePencilTool}>
           {tool === "pencil" ? (
-            <button style={{backgroundColor:'#646cff'}}><img
-            src="images/pencil.png"
-            style={{ height: "20px", transform: "scale(1.5)" }}
-            alt=""
-          /></button>
+            <button style={{ backgroundColor: "#646cff" }}>
+              <img
+                src="images/pencil.png"
+                style={{ height: "20px", transform: "scale(1.5)" }}
+                alt=""
+              />
+            </button>
           ) : (
             <button>
-                 <img src="images/pencil.png" style={{ height: "20px" }} alt="" />
+              <img src="images/pencil.png" style={{ height: "20px" }} alt="" />
             </button>
           )}
         </div>
@@ -226,14 +236,20 @@ const DesignPage = () => {
         </button>
         <button onClick={addTextBox}>Add Text</button>
         <div onClick={toggleTransformer}>
-          {isTransformerEnabled ? <button style={{backgroundColor:'#646cff'}}>Disable Resize</button> : <button>Enable Resize</button>}
+          {isTransformerEnabled ? (
+            <button style={{ backgroundColor: "#646cff" }}>
+              Disable Resize
+            </button>
+          ) : (
+            <button>Enable Resize</button>
+          )}
         </div>
         <button onClick={saveCanvas}>Download Design</button>
       </div>
 
       <Stage
-        width={900}
-        height={500}
+        width={800}
+        height={420}
         style={{ border: "1px solid #fff", backgroundColor: "#121212" }}
         onMouseDown={handleMouseDown}
         onMousemove={handleMouseMove}
@@ -249,8 +265,8 @@ const DesignPage = () => {
               onDragEnd={handleImageDragEnd}
               x={history[historyStep]?.imagePosition?.x || 100}
               y={history[historyStep]?.imagePosition?.y || 50}
-              width={Math.min(image.width, 700)}
-              height={Math.min(image.height, 450)}
+              width={Math.min(image.width, 600)}
+              height={Math.min(image.height, 400)}
             />
           )}
           <Transformer ref={transformerRef} />
