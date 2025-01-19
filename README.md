@@ -1,8 +1,31 @@
-# React + Vite
+# konva image editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A single-page web application that allows users to upload, edit, and download images using **Konva.js**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Upload Image**: Users can upload images from their device.
+- **Edit Tools**:
+  - Freehand drawing with adjustable stroke size and color.
+  - Add and move text boxes.
+  - Resize and rotate images.
+- **Download Image**: Save the edited image as a PNG file.
+
+---
+
+## Tech Stack
+- **Frontend Framework**: React.js
+- **Canvas Library**: Konva.js
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite.js
+
+---
+
+## screenshot
+
+![Screenshot (260)](https://github.com/user-attachments/assets/c442e966-eeb6-4132-9cc3-11cd44616100)
+
+
+---
