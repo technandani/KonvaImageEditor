@@ -20,6 +20,7 @@ body {
   display: flex;
   place-items: center;
   height: 100vh;
+  color: #fff;
   overflow: hidden;
   weight: 100vw;
 }
